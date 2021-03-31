@@ -1,0 +1,104 @@
+
+
+nav.navbar {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    align-self: center;  
+    letter-spacing: 0.06rem;
+    background: #1b5e20;
+    padding: 1rem 1rem;
+    color: #b9f6ca;
+    
+  }
+
+  header > nav > section.user-mode > a {
+      list-style: none;
+      text-decoration: none;
+      align-self: center;
+      /* font-weight: bold; */
+      font-size: 1.5rem;
+      color: #b9f6ca;
+      
+  }
+    
+    header > nav > section.guest-mode > ul > li > a,
+    header > nav > section.user-mode > ul > li >a {
+      margin-right: 0.5rem;
+  
+  }
+  
+  
+  nav.navbar ul {
+    
+    padding: 0.5rem;
+    border: none;
+    margin: 0;
+  }
+  nav.navbar ul li {
+    display: block;
+    list-style: none outside;
+    position: relative;
+  }
+  nav.navbar ul li a {
+    display: block;
+    padding: 0.4rem 0.8rem;
+    
+    text-decoration: none;
+    font-weight: bold;
+    background: #b9f6ca;
+    color: #1b5e20;
+  }
+  
+  nav.navbar ul li a:hover,
+  nav.navbar ul li:hover > a,
+  nav > section > div.user-options > a:hover {
+    background: rgb(107, 248, 175);
+    color: rgb(0, 0, 0);
+    /* font-weight: bold; */    
+
+  }
+  
+  
+  /* usermode */
+  
+  .user-mode{
+      display: flex;
+      justify-content: space-between;    
+      width: 200vw;
+  }
+  .navbar .user-mode .user-options{
+      display: flex;
+      align-items: center;
+      
+  }
+  
+  
+  
+  header > nav > section > div.user-options > a{
+    padding: 0.4rem 0.8rem;
+    
+    text-decoration: none;
+    font-weight: bold;
+    background: #b9f6ca;
+    color: #1b5e20;
+    margin-right: 0.5rem;
+  }
+
+  .navbar .user-settings ul{
+      display: flex;
+      align-items: center;
+  }
+
+  .navbar .user-settings ul li{
+    margin-right: 0.5rem;
+}
+  
+  
+  
+
+
+  .navbar >section.guest-mode ul{
+      display: flex;
+  }
+ 

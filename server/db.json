@@ -1,0 +1,94 @@
+{
+    "destinations": [
+        {
+            "id": 1,
+            "city": "Itápolis",
+            "country": "Brazil",
+            "imageURL": "https://media.worldnomads.com/travel-safety/bulgaria/iskar-river-gorge-bulgaria-gettyimages-1098221494.jpg",
+            "story": "tempor turpis nec euismod scelerisque quam turpis adipiscing lorem vitae mattis nibh ligula",
+            "createdOn": "4/11/2020",
+            "creator": "Newport"
+        },
+        {
+            "id": 2,
+            "city": "Arrabal",
+            "country": "Portugal",
+            "imageURL": "https://media.worldnomads.com/travel-safety/bulgaria/iskar-river-gorge-bulgaria-gettyimages-1098221494.jpg",
+            "story": "cras pellentesque volutpat dui maecenas tristique est et tempus semper est quam pharetra magna ac consequat metus sapien ut",
+            "createdOn": "2/18/2021",
+            "creator": "Hindenberger"
+        },
+        {
+            "id": 3,
+            "city": "Koani Ndogo",
+            "country": "Tanzania",
+            "imageURL": "https://media.worldnomads.com/travel-safety/bulgaria/iskar-river-gorge-bulgaria-gettyimages-1098221494.jpg",
+            "story": "dis parturient montes nascetur ridiculus mus etiam vel augue vestibulum rutrum rutrum",
+            "createdOn": "6/27/2020",
+            "creator": "Bennitt"
+        },
+        {
+            "id": 4,
+            "city": "Gandoang",
+            "country": "Indonesia",
+            "imageURL": "https://media.worldnomads.com/travel-safety/bulgaria/iskar-river-gorge-bulgaria-gettyimages-1098221494.jpg",
+            "story": "velit nec nisi vulputate nonummy maecenas tincidunt lacus at velit vivamus vel nulla eget eros elementum",
+            "createdOn": "12/21/2020",
+            "creator": "O'Reilly"
+        },
+        {
+            "id": 5,
+            "city": "Los Angeles",
+            "country": "United States",
+            "imageURL": "https://media.worldnomads.com/travel-safety/bulgaria/iskar-river-gorge-bulgaria-gettyimages-1098221494.jpg",
+            "story": "ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae donec pharetra",
+            "createdOn": "10/8/2020",
+            "creator": "Heathwood"
+        },
+        {
+            "id": 6,
+            "city": "Outeiro",
+            "country": "Portugal",
+            "imageURL": "https://media.worldnomads.com/travel-safety/bulgaria/iskar-river-gorge-bulgaria-gettyimages-1098221494.jpg",
+            "story": "et magnis dis parturient montes nascetur ridiculus mus etiam vel augue vestibulum rutrum rutrum neque",
+            "createdOn": "6/24/2020",
+            "creator": "Knightsbridge"
+        },
+        {
+            "id": 7,
+            "city": "Vitoria-Gasteiz",
+            "country": "Spain",
+            "imageURL": "https://media.worldnomads.com/travel-safety/bulgaria/iskar-river-gorge-bulgaria-gettyimages-1098221494.jpg",
+            "story": "at feugiat non pretium quis lectus suspendisse potenti in eleifend quam",
+            "createdOn": "8/16/2020",
+            "creator": "Freed"
+        },
+        {
+            "id": 8,
+            "city": "Chenzhou",
+            "country": "China",
+            "imageURL": "https://media.worldnomads.com/travel-safety/bulgaria/iskar-river-gorge-bulgaria-gettyimages-1098221494.jpg",
+            "story": "nisl aenean lectus pellentesque eget nunc donec quis orci eget orci",
+            "createdOn": "7/31/2020",
+            "creator": "Steeden"
+        },
+        {
+            "id": 9,
+            "city": "Fier",
+            "country": "Albania",
+            "imageURL": "https://media.worldnomads.com/travel-safety/bulgaria/iskar-river-gorge-bulgaria-gettyimages-1098221494.jpg",
+            "story": "eu massa donec dapibus duis at velit eu est congue elementum in hac habitasse platea dictumst",
+            "createdOn": "8/10/2020",
+            "creator": "Oak"
+        },
+        {
+            "id": 10,
+            "city": "Al Madīd",
+            "country": "Yemen",
+            "imageURL": "https://media.worldnomads.com/travel-safety/bulgaria/iskar-river-gorge-bulgaria-gettyimages-1098221494.jpg",
+            "story": "blandit nam nulla integer pede justo lacinia eget tincidunt eget tempus vel pede morbi porttitor lorem id ligula suspendisse ornare",
+            "createdOn": "11/22/2020",
+            "creator": "Marval"
+        }
+    ]
+}
