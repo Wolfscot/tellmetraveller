@@ -2,6 +2,8 @@
     "destinations": [
         {
             "id": 1,
+            "title":"one night above",
+            "type":"mountainwalk",
             "city": "Itápolis",
             "country": "Brazil",
             "imageURL": "https://media.worldnomads.com/travel-safety/bulgaria/iskar-river-gorge-bulgaria-gettyimages-1098221494.jpg",
@@ -11,6 +13,8 @@
         },
         {
             "id": 2,
+            "title":"one night above",
+            "type":"seaside",
             "city": "Arrabal",
             "country": "Portugal",
             "imageURL": "https://media.worldnomads.com/travel-safety/bulgaria/iskar-river-gorge-bulgaria-gettyimages-1098221494.jpg",
@@ -20,6 +24,8 @@
         },
         {
             "id": 3,
+            "title":"one night above",
+            "type":"hiking",
             "city": "Koani Ndogo",
             "country": "Tanzania",
             "imageURL": "https://media.worldnomads.com/travel-safety/bulgaria/iskar-river-gorge-bulgaria-gettyimages-1098221494.jpg",
@@ -29,8 +35,10 @@
         },
         {
             "id": 4,
+            "title":"one night above",
+            "type":"natinal culture",
             "city": "Gandoang",
-            "country": "Indonesia",
+            "country": "Indonesia",            
             "imageURL": "https://media.worldnomads.com/travel-safety/bulgaria/iskar-river-gorge-bulgaria-gettyimages-1098221494.jpg",
             "story": "velit nec nisi vulputate nonummy maecenas tincidunt lacus at velit vivamus vel nulla eget eros elementum",
             "createdOn": "12/21/2020",
@@ -38,6 +46,8 @@
         },
         {
             "id": 5,
+            "title":"one night above",
+            "type":"festival",
             "city": "Los Angeles",
             "country": "United States",
             "imageURL": "https://media.worldnomads.com/travel-safety/bulgaria/iskar-river-gorge-bulgaria-gettyimages-1098221494.jpg",
@@ -47,6 +57,8 @@
         },
         {
             "id": 6,
+            "title":"one night above",
+            "type":"sport",
             "city": "Outeiro",
             "country": "Portugal",
             "imageURL": "https://media.worldnomads.com/travel-safety/bulgaria/iskar-river-gorge-bulgaria-gettyimages-1098221494.jpg",
@@ -56,6 +68,8 @@
         },
         {
             "id": 7,
+            "title":"one night above",
+            "type":"sport",
             "city": "Vitoria-Gasteiz",
             "country": "Spain",
             "imageURL": "https://media.worldnomads.com/travel-safety/bulgaria/iskar-river-gorge-bulgaria-gettyimages-1098221494.jpg",
@@ -65,6 +79,8 @@
         },
         {
             "id": 8,
+            "title":"one night above",
+            "type":"festival",
             "city": "Chenzhou",
             "country": "China",
             "imageURL": "https://media.worldnomads.com/travel-safety/bulgaria/iskar-river-gorge-bulgaria-gettyimages-1098221494.jpg",
@@ -74,6 +90,8 @@
         },
         {
             "id": 9,
+            "title":"one night above",
+            "type":"sea side",
             "city": "Fier",
             "country": "Albania",
             "imageURL": "https://media.worldnomads.com/travel-safety/bulgaria/iskar-river-gorge-bulgaria-gettyimages-1098221494.jpg",
@@ -83,6 +101,8 @@
         },
         {
             "id": 10,
+            "title":"one night above",
+            "type":"other",            
             "city": "Al Madīd",
             "country": "Yemen",
             "imageURL": "https://media.worldnomads.com/travel-safety/bulgaria/iskar-river-gorge-bulgaria-gettyimages-1098221494.jpg",

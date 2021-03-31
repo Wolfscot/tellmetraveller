@@ -7,7 +7,7 @@ const Header =() =>{
             <section className="user-mode">
                 <div className="user-options">
                     <a href="#">All Stories</a>
-                    <a href="#">My Stories</a>
+                    <a href="#">My Diary</a>
                     <a  href="#">Add a Story</a>
                 </div>
                 <div className="user-settings">
