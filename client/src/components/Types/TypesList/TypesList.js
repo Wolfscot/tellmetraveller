@@ -2,23 +2,21 @@ import { NavLink } from 'react-router-dom';
 
 const TypesList = () => {
     return (
-        <nav className="navbar">
+        <nav className="navbar-destinations">
             <ul>
-                <li><NavLink to="/categories/all">All</NavLink></li>
-                <li><NavLink to="/categories/Cat">Cats</NavLink></li>
-                <li><NavLink to="/categories/Dog">Dogs</NavLink></li>
-                <li><NavLink to="/categories/Parrot">Parrots</NavLink></li>
-                <li><NavLink to="/categories/Reptile">Reptiles</NavLink></li>
-                <li><NavLink to="/categories/Other">Other</NavLink></li>
+                <li><NavLink to="/types/all">All</NavLink></li>
+                <li><NavLink to="/types/mountain-walk">Mountain Walk</NavLink></li>
+                <li><NavLink to="/types/seaside">Sea Side</NavLink></li>
+                <li><NavLink to="/types/hiking">Hiking</NavLink></li>
+                <li><NavLink to="/types/tribetourism">Tribe Tourism</NavLink></li>
+                <li><NavLink to="/types/festival">Festival</NavLink></li>
+                <li><NavLink to="/types/sports">Sports</NavLink></li>
+                <li><NavLink to="/types/other">Other</NavLink></li>
             </ul>
 
-            <style jsx>{`
-                .active {
-                    background-color: lightgreen !important;
-                }
-            `}</style>
+         
         </nav>
     );
 };
 
-export default CategoryNavigation;
+export default TypesList;

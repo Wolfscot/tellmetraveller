@@ -3,7 +3,7 @@
         {
             "id": 1,
             "title":"one night above",
-            "type":"mountainwalk",
+            "type":"mountain-walk",
             "city": "Itápolis",
             "country": "Brazil",
             "imageURL": "https://media.worldnomads.com/travel-safety/bulgaria/iskar-river-gorge-bulgaria-gettyimages-1098221494.jpg",
@@ -36,7 +36,7 @@
         {
             "id": 4,
             "title":"one night above",
-            "type":"natinal culture",
+            "type":"natiоnal-culture",
             "city": "Gandoang",
             "country": "Indonesia",            
             "imageURL": "https://media.worldnomads.com/travel-safety/bulgaria/iskar-river-gorge-bulgaria-gettyimages-1098221494.jpg",
@@ -58,7 +58,7 @@
         {
             "id": 6,
             "title":"one night above",
-            "type":"sport",
+            "type":"sports",
             "city": "Outeiro",
             "country": "Portugal",
             "imageURL": "https://media.worldnomads.com/travel-safety/bulgaria/iskar-river-gorge-bulgaria-gettyimages-1098221494.jpg",
@@ -69,7 +69,7 @@
         {
             "id": 7,
             "title":"one night above",
-            "type":"sport",
+            "type":"sports",
             "city": "Vitoria-Gasteiz",
             "country": "Spain",
             "imageURL": "https://media.worldnomads.com/travel-safety/bulgaria/iskar-river-gorge-bulgaria-gettyimages-1098221494.jpg",
@@ -91,7 +91,7 @@
         {
             "id": 9,
             "title":"one night above",
-            "type":"sea side",
+            "type":"seaside",
             "city": "Fier",
             "country": "Albania",
             "imageURL": "https://media.worldnomads.com/travel-safety/bulgaria/iskar-river-gorge-bulgaria-gettyimages-1098221494.jpg",

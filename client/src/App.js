@@ -4,6 +4,7 @@ import './App.css';
 
 import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
+import Types from './components/Types/Types';
 
 
 function App() {
@@ -12,11 +13,11 @@ function App() {
       <Header/>
      
 
-        {/* <Switch>
-          <Route path="/" exact component={} />
-          <Route path="/categories/:category" component={} />
-          <Route path="/pets/details/:petId" component={} />
-        </Switch> */}
+        <Switch>
+          <Route path="/" exact component={Types} />
+          <Route path="/types/:type" component={Types} />
+          {/* //<Route path="/destinations/details/:petId" component={} /> */}
+        </Switch>
         
         
       <Footer/>

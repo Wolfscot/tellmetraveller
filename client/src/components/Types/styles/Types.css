@@ -1,0 +1,15 @@
+.destinations > nav > ul {
+    display: flex;
+    flex-wrap: wrap;
+    
+  
+  }
+  
+  .destinations> nav.navbar-destinations >ul li {
+    padding: 0.5rem 1rem;
+  }
+  
+  .destinations> nav.navbar-destinations {
+    justify-content: center;
+  }
+  

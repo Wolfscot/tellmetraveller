@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
-import './styles/DestionationCard.js';
+
+import  './styles/DestinationCard.css';
 
 const Destination = ({
     id,

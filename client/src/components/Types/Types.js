@@ -1,24 +1,55 @@
-import { NavLink } from 'react-router-dom';
+import { Component } from 'react';
 
-const DestinationTypes = () => {
-    return (
-        <nav className="navbar">
-            <ul>
-                <li><NavLink to="/categories/all">All</NavLink></li>
-                <li><NavLink to="/categories/Cat">Cats</NavLink></li>
-                <li><NavLink to="/categories/Dog">Dogs</NavLink></li>
-                <li><NavLink to="/categories/Parrot">Parrots</NavLink></li>
-                <li><NavLink to="/categories/Reptile">Reptiles</NavLink></li>
-                <li><NavLink to="/categories/Other">Other</NavLink></li>
-            </ul>
+import * as destinationServices from '../../services/destinationServices.js';
 
-            <style jsx>{`
-                .active {
-                    background-color: lightgreen !important;
-                }
-            `}</style>
-        </nav>
-    );
-};
+import DestinationCard from '../DestinationCard/DestinationCard';
+import TypesList from './TypesList/TypesList';
+import '../Types/styles/Types.css'
 
-export default CategoryNavigation;
+class Types extends Component {
+    constructor(props) {
+        super(props);
+
+        this.state = {
+            destinations: [],
+            latestType: 'all',
+        }
+    }
+
+    componentDidMount() {
+        destinationServices.getAll()
+            .then(res => this.setState({ destinations: res }))
+    }
+
+    componentDidUpdate(prevProps) {
+        const type = this.props.match.params.type;
+
+        if (prevProps.match.params.type === type) {
+            return;
+        }
+
+        destinationServices.getAll(type)
+            .then(res => {
+
+                this.setState({ destinations: res, latestType: type })
+            })
+    }
+
+    render() {
+        return (
+            <div className="destinations">
+                <h1>Destinations</h1>
+
+                <TypesList />
+
+                <ul className="destination-list">
+                    {this.state.destinations.map(x => 
+                        <DestinationCard key={x.id} {...x} />
+                    )}
+                </ul>
+            </div>
+        );
+    }
+}
+
+export default Types;
