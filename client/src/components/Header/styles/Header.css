@@ -1,4 +1,15 @@
-
+header{
+  border:solid 2px gold;
+  
+  background-image: url(../../../images/banner-jungle.jpg);
+  
+  width:auto;
+  height: auto; /* You must set a specified height */
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; 
+  margin: 0 0;
+}
 
 nav.navbar {
     display: flex;
@@ -6,9 +17,9 @@ nav.navbar {
     justify-content: flex-end;
     align-self: center;  
     letter-spacing: 0.06rem;
-    background: #1b5e20;
+    /* background: #1b5e20; */
     padding: 1rem 1rem;
-    color: #b9f6ca;
+    color: gold;
     
   }
 
@@ -18,7 +29,7 @@ nav.navbar {
       align-self: center;
       /* font-weight: bold; */
       font-size: 1.5rem;
-      color: #b9f6ca;
+      color: gold;
       
   }
     
@@ -46,16 +57,21 @@ nav.navbar {
     
     text-decoration: none;
     font-weight: bold;
-    background: #b9f6ca;
+    background: gold;
     color: #1b5e20;
+    text-transform: uppercase;
+    letter-spacing: 2px;
   }
   
   nav.navbar ul li a:hover,
   nav.navbar ul li:hover > a,
   nav > section > div.user-options > a:hover {
-    background: rgb(107, 248, 175);
-    color: rgb(0, 0, 0);
-    /* font-weight: bold; */    
+    background: #1b5e20;
+    color:gold;
+    border: solid;
+    border-color: gold;
+    border-radius: 5%;
+    font-weight: bold;  
 
   }
   
@@ -73,16 +89,21 @@ nav.navbar {
       
   }
   
-  
+   .welcome-message{
+    color: #1b5e20;
+    font-weight: bold;
+  }
   
   header > nav > section > div.user-options > a{
     padding: 0.4rem 0.8rem;
     
     text-decoration: none;
     font-weight: bold;
-    background: #b9f6ca;
+    background: gold;
     color: #1b5e20;
     margin-right: 0.5rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
   }
 
   .navbar .user-settings ul{

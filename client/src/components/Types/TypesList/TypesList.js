@@ -3,6 +3,7 @@ import { NavLink } from 'react-router-dom';
 const TypesList = () => {
     return (
         <nav className="navbar-destinations">
+            <h1>Destinations</h1>
             <ul>
                 <li><NavLink to="/types/all">All</NavLink></li>
                 <li><NavLink to="/types/mountain-walk">Mountain Walk</NavLink></li>

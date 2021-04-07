@@ -1,6 +1,6 @@
 const url = 'http://localhost:5000/destinations';
 
-export const getAll = (type = '') => {
+export const getAllDestinations = (type = '') => {
     let destinationsUrl = url + ((type && type !== 'all') ? `?type=${type}` : '');
 
     return fetch(destinationsUrl)
@@ -8,47 +8,29 @@ export const getAll = (type = '') => {
         .catch(error => console.log(error));
 };
 
-// export const getOne = (petId) => {
-//     return fetch(`${url}/${petId}`)
-//         .then(res => res.json())
-//         .catch(error => console.log(error));
-// };
+export const getOneDestination = (destinationId) => {
+    return fetch(`${url}/${destinationId}`)
+        .then(res => res.json())
+        .catch(error => console.log(error));
+};
 
-// export const create = (petName, description, imageURL, type) => {
-//     let pet = {
-//         name: petName,
-//         description,
-//         imageURL,
-//         type,
-//         likes: 0,
-//     };
-    
-//     return fetch(url, {
-//         method: 'POST',
-//         headers: {
-//             'Content-Type': 'application/json',
-//         },
-//         body: JSON.stringify(pet)
-//     });
-// };
+export const updateDestination = (destinationId, destination) => {
+    return fetch(`${url}/${destinationId}`, {
+        method: 'PUT',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(destination)
+    });
+};
 
-// export const update = (petId, pet) => {
-//     return fetch(`${url}/${petId}`, {
-//         method: 'PUT',
-//         headers: {
-//             'Content-Type': 'application/json',
-//         },
-//         body: JSON.stringify(pet)
-//     });
-// };
-
-// export const pet = (petId, likes) => {
-//     return fetch(`${url}/${petId}`, {
-//         method: 'PATCH',
-//         headers: {
-//             'Content-Type': 'application/json',
-//         },
-//         body: JSON.stringify({likes})
-//     })
-//         .then(res => res.json());
-// }
+export const destination = (destinationId, votes) => {
+    return fetch(`${url}/${destinationId}`, {
+        method: 'PATCH',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({votes})
+    })
+        .then(res => res.json());
+}

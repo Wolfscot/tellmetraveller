@@ -9,19 +9,21 @@ const Destination = ({
     imageURL,
     city,
     country,
-    creator
+    creator,
+    votes
 }) => {
 
     return (
         <li className="destination-card">
+           
+            <p className="destination-img"><img src={imageURL} /></p>
             <h2>{title}</h2>
             <p> {type}</p>
-            <p className="destination-img"><img src={imageURL} /></p>
-            <p className="destination-city">{city}</p>
-            <p className="destination-country">{country}</p>
-            <p className="destination-creator">{creator}</p>
+            <p className="destination-city">City: {city}</p>
+            <p className="destination-country">Country:{country}</p>
+            <p className="destination-creator">Traveller:{creator}</p>
             <div className="destination-info">
-                <Link to="#"><button className="button">Like</button></Link>
+                <Link to="/"><button className="button">Vote</button></Link>
                 <Link to={`/destinations/details/${id}`}><button className="button">Experience</button></Link>
                
             </div>

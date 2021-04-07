@@ -17,7 +17,7 @@ class Types extends Component {
     }
 
     componentDidMount() {
-        destinationServices.getAll()
+        destinationServices.getAllDestinations()
             .then(res => this.setState({ destinations: res }))
     }
 
@@ -28,7 +28,7 @@ class Types extends Component {
             return;
         }
 
-        destinationServices.getAll(type)
+        destinationServices.getAllDestinations(type)
             .then(res => {
 
                 this.setState({ destinations: res, latestType: type })
@@ -37,8 +37,7 @@ class Types extends Component {
 
     render() {
         return (
-            <div className="destinations">
-                <h1>Destinations</h1>
+            <div className="destinations">               
 
                 <TypesList />
 

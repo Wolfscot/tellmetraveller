@@ -5,6 +5,7 @@ import './App.css';
 import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
 import Types from './components/Types/Types';
+import DestinationDetails from './components/Details/Details'
 
 
 function App() {
@@ -16,7 +17,7 @@ function App() {
         <Switch>
           <Route path="/" exact component={Types} />
           <Route path="/types/:type" component={Types} />
-          {/* //<Route path="/destinations/details/:petId" component={} /> */}
+          <Route path="/destinations/details/:destinationId" exact component={DestinationDetails} />
         </Switch>
         
         

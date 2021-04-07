@@ -2,18 +2,30 @@ li.destination-card {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background:darkcyan;
-    color:darkseagreen;
+    margin: 0.5rem;
+    color:gold;
+    border: 2px solid;
+    
+    border-color: gold;
+    width: 300px;
+    height: 500px;
+    background-color: #1b5e20; 
+    -moz-border-radius: 250px 10px;
+    -webkit-border-radius: 250px 10px;
+    border-radius: 250px 10px;
 }
+
+
 
 
 .destination-img {
-    width: 10rem;
+    width: 15rem;
     position: relative;
     overflow: hidden;
     padding: 0rem;
-    border-radius: 5%;
+    
 }
+
   
 img {
     display: block;
@@ -22,18 +34,37 @@ img {
     right: 0;
     width: 100%;
     height: auto;
-    object-fit: cover;
+    object-fit: cover;    
+    border:1px solid gold;
+    -moz-border-radius: 10px 250px;
+    -webkit-border-radius: 10px 250px;
+    border-radius: 10px 250px;
   }
   
 .destination-img::after {
     display: block;
     content: "";
-    padding-top: 100%;
+    padding-top: 65%;
 }
 
-.destination-card h2, p {
-    padding: 0.5rem;
-    margin: 0.5rem;
+.destination-info {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.destination info h2, p {
+    margin: 0.05rem;
+    letter-spacing: 1px;
+}
+.destination-info .button{
+    text-decoration: none;
+    font-weight: bold;
+    background: gold;
+    color: #1b5e20;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-right: 0.5rem;
+
 }
 
 

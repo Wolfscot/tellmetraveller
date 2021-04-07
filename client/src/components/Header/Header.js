@@ -1,4 +1,5 @@
-import './styles/Header.css'
+import './styles/Header.css';
+
 
 const Header =() =>{
     return (
@@ -6,13 +7,13 @@ const Header =() =>{
         <nav className="navbar">
             <section className="user-mode">
                 <div className="user-options">
-                    <a href="#">All Stories</a>
+                    <a href="/">All Stories</a>
                     <a href="#">My Diary</a>
                     <a  href="#">Add a Story</a>
                 </div>
                 <div className="user-settings">
                     <ul>
-                        <li>Welcome, Pesho!</li>
+                        <li className="welcome-message">Welcome, Pesho!</li>
                         <li><a href="#"> Logout</a></li>
                     </ul>
                 </div>
