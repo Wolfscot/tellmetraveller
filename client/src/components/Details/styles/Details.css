@@ -1,28 +1,107 @@
-.destination-details {
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    max-width: 300px;
-    margin: auto;
-    text-align: center;
-    font-family: arial;
+
+/* * {
+  box-sizing: border-box;
+} */
+
+
+
+  .destination-details {
+    box-sizing: border-box;
+    align-self: center;
+    width: 60%;
+     height: auto;
+    position:absolute;
+    background: #ffdc73;
+    margin: 5% auto;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16),
+      0 2px 10px 0 rgba(0, 0, 0, 0.12);
+    transition: all 0.3s;
   }
+
+
+  .destination-details:hover {
+    box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2),
+      0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }    
+   
   
-  .details-city, .details-country {
-    color: grey;
-    font-size: 22px;
-  }
-  
-  .destination-details button {
-    border: none;
-    outline: 0;
-    padding: 12px;
-    color: white;
-    background-color: #000;
-    text-align: center;
-    cursor: pointer;
-    width: 100%;
-    font-size: 18px;
-  }
-  
-  .destination-details button:hover {
-    opacity: 0.7;
-  }
+
+    .details-img {
+      padding: 2rem;
+      width: 30%;
+      height:auto;
+     
+      
+
+      
+    }
+    img {
+        height: 300px;
+        padding:1rem;
+      }
+
+
+    .details-story {
+        margin: 1rem;
+      
+      text-align:center;     
+      
+      
+
+     
+      }
+    
+      .destination-details h1 {
+        color: #1b5e20;
+        font-weight: 300;
+        padding-top: 15px;
+        margin: 0;
+        font-size: 30px;
+        font-weight: 300;
+        text-align: center;
+        padding : 1rem;
+        font-weight: bold;
+      }
+
+     
+
+     
+      .destination-details p {
+        
+        line-height: 20px;
+        color: #1b5e20;
+        padding: 1 rem;
+        margin: 0 0.5 rem;
+        font-weight: bold;
+        text-align: center;
+      }     
+
+      
+     .destination-options .button {
+        outline: 0;
+        border: 0;
+        background: none;
+        border: 1px solid #ffdc73;
+        padding: 8px 0px;
+        
+        color: #1b5e20;
+        text-transform: uppercase;
+        width: 125px;
+        margin: 0 2rem;
+        font-family: inherit;
+        /* margin-right: 2rem; */
+        transition: all 0.3s ease;
+        font-weight:bold;
+        border: 2px solid #1b5e20;
+
+
+      }
+      .destination-options .button:hover {
+        background: #1b5e20;
+        border: 2px solid gold;
+        color: gold;
+        cursor: pointer;
+      }

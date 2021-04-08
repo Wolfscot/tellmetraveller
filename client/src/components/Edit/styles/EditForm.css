@@ -1,0 +1,55 @@
+.edit-destination h1 {
+    text-align: center;
+    color:#1b5e20;
+}
+form {
+    display: grid;
+    width: 25%;
+    margin: 0 auto;
+    text-align: center;
+    color: 1b5e20;
+    font-weight: bold;
+    color:gold;
+    background-color: #1b5e20;
+    padding:1rem 2rem;
+  }
+  form:hover {
+    box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2),
+      0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }    
+  
+  input[type="text"],
+  input[type="password"],
+  input[type="number"],
+  textarea {
+    padding: 0.5rem;
+    margin: 0.5rem;
+    border-radius: 10px;
+    outline: none;
+    
+    background-color:lemonchiffon;
+  }
+  
+  input[type="submit"]
+   {
+    border: 2px solid #1b5e20;
+    background: gold;
+    background-position: center;
+    background-size: cover;
+    color: #1b5e20;
+    font-weight: bold;
+    width: 30%;
+    margin: 1rem auto;
+    padding: 0.5rem;
+    text-transform: uppercase;
+  }
+  
+  input[type="submit"]:hover {
+    border: 2px solid gold;
+    background: #1b5e20;
+    color: gold;
+    text-decoration: none;
+    
+  }
+
+
