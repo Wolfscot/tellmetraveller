@@ -9,7 +9,7 @@ const Header =() =>{
                 <div className="user-options">
                     <a href="/">All Stories</a>
                     <a href="#">My Diary</a>
-                    <a  href="#">Add a Story</a>
+                    <a  href="/destinations/create">Add a Story</a>
                 </div>
                 <div className="user-settings">
                     <ul>

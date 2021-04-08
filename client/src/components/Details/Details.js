@@ -8,7 +8,7 @@ const DestinationDetails = ({
     match
 }) => {
     let [destination, setDest] = useState({});
-
+    
     useEffect(() => {
         destinationService.getOneDestination(match.params.destinationId)
             .then(res => setDest(res));

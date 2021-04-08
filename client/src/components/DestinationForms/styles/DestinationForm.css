@@ -1,4 +1,5 @@
-.edit-destination h1 {
+.edit-destination h1,
+.create-destination h1 {
     text-align: center;
     color:#1b5e20;
 }
@@ -21,7 +22,9 @@ form {
   input[type="text"],
   input[type="password"],
   input[type="number"],
-  textarea {
+  textarea,
+  select, option
+   {
     padding: 0.5rem;
     margin: 0.5rem;
     border-radius: 10px;

@@ -6,8 +6,8 @@ import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
 import Types from './components/Types/Types';
 import DestinationDetails from './components/Details/Details';
-import EditDestinationForm from './components/Edit/EditForm';
-
+import EditDestinationForm from './components/DestinationForms/Edit/EditForm';
+import CreateDestinationForm from './components/DestinationForms/Create/CreateForm';
 
 function App() {
   return (
@@ -20,6 +20,7 @@ function App() {
           <Route path="/types/:type" component={Types} />
           <Route path="/destinations/details/:destinationId" exact component={DestinationDetails} />
           <Route path="/destinations/details/:petId/edit" component={EditDestinationForm } />
+          <Route path="/destinations/create" component={CreateDestinationForm} />
         </Switch>
         
         

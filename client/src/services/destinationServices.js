@@ -14,6 +14,25 @@ export const getOneDestination = (destinationId) => {
         .catch(error => console.log(error));
 };
 
+export const createDestination = (title, city, country, imageURL, type, story) => {
+    let destination = {
+        title,
+        city,
+        country,
+        imageURL,
+        type,
+        story,
+        votes: 0,
+    };
+    
+    return fetch(url, {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(destination)
+    });
+};
 export const updateDestination = (destinationId, destination) => {
     return fetch(`${url}/${destinationId}`, {
         method: 'PUT',
