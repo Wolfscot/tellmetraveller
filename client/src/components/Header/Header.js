@@ -12,7 +12,7 @@ const Header =() =>{
                     <a href="#">My Diary</a>
                     <a  href="/destinations/create">Add a Story</a>
                     <a  href="/about">About</a>
-                    <a  href="/contacts">Contacts</a>
+                    
                 </div>
                 <div className="user-settings">
                     <ul>

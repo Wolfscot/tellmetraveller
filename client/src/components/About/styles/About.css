@@ -1,0 +1,17 @@
+.about, .about >p {
+    
+    margin:1rem;
+    padding:1rem;
+    background:khaki;
+    color:#1b5e20;
+  }
+  .about h1,
+  .about h2 {
+      text-align: center;
+  }
+
+
+  .about:hover {
+    box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2),
+      0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }  

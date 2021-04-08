@@ -9,7 +9,9 @@ import DestinationDetails from './components/Details/Details';
 import EditDestinationForm from './components/DestinationForms/Edit/EditForm';
 import CreateDestinationForm from './components/DestinationForms/Create/CreateForm';
 import Register from './components/Users/Register/Register';
-import Login from './components/Users/Login/Login'
+import Login from './components/Users/Login/Login';
+import About from './components/About/About';
+
 
 function App() {
   return (
@@ -25,6 +27,8 @@ function App() {
           <Route path="/destinations/create" component={CreateDestinationForm} />
           <Route path="/register" component={Register} />
           <Route path="/login" component={Login} />
+          <Route path="/about" component={About} />
+          
         </Switch>
         
         
