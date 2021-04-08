@@ -1,6 +1,7 @@
 import './styles/Header.css';
 
 
+
 const Header =() =>{
     return (
         <header className="header">
@@ -10,6 +11,8 @@ const Header =() =>{
                     <a href="/">All Stories</a>
                     <a href="#">My Diary</a>
                     <a  href="/destinations/create">Add a Story</a>
+                    <a  href="/about">About</a>
+                    <a  href="/contacts">Contacts</a>
                 </div>
                 <div className="user-settings">
                     <ul>
@@ -21,8 +24,9 @@ const Header =() =>{
             <section className="guest-mode">
                 <ul>
                     <li><a href="/">Home</a></li>
-                    <li><a href="#"> Register</a></li>
-                    <li><a href="#">Login</a></li>
+                    <li><a href="/register"> Register</a></li>
+                    <li><a href="/login">Login</a></li>
+                    
                 </ul>
             </section>
         </nav>

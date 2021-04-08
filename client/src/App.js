@@ -8,6 +8,8 @@ import Types from './components/Types/Types';
 import DestinationDetails from './components/Details/Details';
 import EditDestinationForm from './components/DestinationForms/Edit/EditForm';
 import CreateDestinationForm from './components/DestinationForms/Create/CreateForm';
+import Register from './components/Users/Register/Register';
+import Login from './components/Users/Login/Login'
 
 function App() {
   return (
@@ -21,6 +23,8 @@ function App() {
           <Route path="/destinations/details/:destinationId" exact component={DestinationDetails} />
           <Route path="/destinations/details/:petId/edit" component={EditDestinationForm } />
           <Route path="/destinations/create" component={CreateDestinationForm} />
+          <Route path="/register" component={Register} />
+          <Route path="/login" component={Login} />
         </Switch>
         
         
