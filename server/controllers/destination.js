@@ -1,52 +1,64 @@
-const Destination = require('../models/Destination');
+const models = require('../models');
 
 module.exports = {
     get: {
         all: (req, res, next) => {
-            Destination.find()
-                .then(destinations => {
-                    res.json(destinations);
+            models.Destination.find().populate('creatorId')
+                .then(journals => {
+                    res.json(journals);
                 });
         },
 
         details: (req, res, next) => {
             const {id} = req.params;
-            Destination.findById(id)
-                .then(destination => {
-                    res.json(destination);
+            models.Destination.findById(id)
+                .then(journal => {
+                    res.json(journal);
                 })
         },
-
+        my: (req, res, next) => {
+            const { id } = req.body;
+            models.Destination.find({creatorId: id})
+                .then(destinations => {
+                    res.json(destinations);
+                });
+        },
     },
 
-    post: (req, res, next) => {
-        const {
-            title,
-            city,
-            country,
-            imageURL,
-            type,
-            story,
-            votes
-        } = req.body;
+    post: {        
 
-        Destination.create({
-            title,
-            city,
-            country,
-            imageURL,
-            type,
-            story,
-            votes:0})
-            .then((createdDestination) => {
-                return Promise.all([
-                    Destination.findOne({_id: createdDestination._id})
-                ]);
-            })
-            .then(([modifiedObj, destinationObj]) => {
-                res.send(destinationObj);
-            })
-            .catch(next);
+        create: (req, res, next) => {
+            const {
+                title,
+                city,
+                country,
+                imageURL,
+                type,
+                story,
+                votes,
+                creatorId
+            } = req.body;
+
+            models.Destination.create({ 
+                title,
+                city,
+                country,
+                imageURL,
+                type,
+                story,
+                votes,
+                creatorId})
+                .then((createdDestination) => {
+                    return Promise.all([
+                        models.User.updateOne({_id: creatorId}, {$push: {destinations: createdDestination}}),
+                        models.Destination.findOne({_id: createdJournal._id})
+                    ]);
+                })
+                .then(([modifiedObj, DestinationObj]) => {
+                    res.send(DestinationObj);
+                })
+                .catch(next);
+        },
     },
 
     put: (req, res, next) => {
@@ -58,26 +70,26 @@ module.exports = {
             imageURL,
             type,
             story,
-            votes
+           
             
         } = req.body;
 
-        Destination.updateOne({_id: id}, {
-             title,
+        models.Destination.updateOne({_id: id}, {
+            title,
             city,
             country,
             imageURL,
             type,
-            story,
-            votes})
+            story
+           })
             .then((updatedDestination) => res.send(updatedDestination))
             .catch(next);
     },
 
     delete: (req, res, next) => {
         const id = req.params.id;
-        Destination.deleteOne({_id: id})
-            .then((removedDestination) => res.send(removedDestination))
+        models.Destination.deleteOne({_id: id})
+            .then((removedDestination) => res.send(rremovedDestination))
             .catch(next)
     }
 };

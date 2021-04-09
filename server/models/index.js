@@ -1,5 +1,5 @@
 const User = require('./User');
-const Origami = require('./Destination');
+const Destination = require('./Destination');
 const TokenBlacklist = require('./TokenBlacklist');
 
 module.exports = {
