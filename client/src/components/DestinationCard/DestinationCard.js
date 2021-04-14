@@ -23,7 +23,7 @@ const Destination = ({
             <p className="destination-country">Country:{country}</p>
             <p className="destination-creator">Traveller:{creator}</p>
             <div className="destination-info">
-                <Link to="/"><button className="button">Vote</button></Link>
+                
                 <Link to={`/destinations/details/${id}`}><button className="button">Experience</button></Link>
                
             </div>

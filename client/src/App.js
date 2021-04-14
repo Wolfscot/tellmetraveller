@@ -5,7 +5,7 @@ import './App.css';
 import Header from './components/Header/Header';
 
 import Footer from './components/Footer/Footer';
-import Types from './components/Types/Types';
+import Home from './components/Home/Home';
 import DestinationDetails from './components/Details/Details';
 import EditDestinationForm from './components/DestinationForms/Edit/EditForm';
 import CreateDestinationForm from './components/DestinationForms/Create/CreateForm';
@@ -22,10 +22,9 @@ function App() {
      
 
         <Switch>
-          <Route path="/" exact component={Types} />
-          <Route path="/types/:type" component={Types} />
+          <Route path="/"component={Home} />          
           <Route path="/destinations/details/:destinationId" exact component={DestinationDetails} />
-          <Route path="/destinations/details/:petId/edit" component={EditDestinationForm } />
+          <Route path="/destinations/details/:destinationId/edit" component={EditDestinationForm } />
           <Route path="/destinations/create" component={CreateDestinationForm} />
           <Route path="/register" component={Register} />
           <Route path="/login" component={Login} />

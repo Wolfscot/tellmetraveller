@@ -10,7 +10,7 @@ const EditForm =({
     const [destination, setDest] =useState({});
 
     useEffect(() => {
-       destinationServices.getOneDestination(match.params.destinationId)
+       destinationServices.getOne(match.params.destinationId)
        .then(res =>setDest(res))
     }, [])
 
@@ -27,7 +27,7 @@ const EditForm =({
             
         }
 
-        destinationServices.updateDestination(destinationId, newDestinationInfo)
+        destinationServices.update(destinationId, newDestinationInfo)
         .then(() =>{
             history.push(`/`)
         });

@@ -7,9 +7,9 @@ const CreateForm = ({
     const onCreateDestinationSubmitHandler = (e) => {
         e.preventDefault();
         
-        const { title,city,country, imageURL, type, story } = e.target;
+        const { title,city,country, imageURL, type, story,creator } = e.target;
 
-        destinationService.createDestination(title.value, city.value, country.value,imageURL.value, type.value, story.value)
+        destinationService.create(title.value, city.value, country.value,imageURL.value, type.value, story.value)
             .then(() => {
                 history.push('/');
             })

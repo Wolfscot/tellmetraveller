@@ -1,39 +1,40 @@
 
 import React, { useState, useEffect} from 'react';
-
+import { Link } from "react-router-dom";
 import * as destinationServices from '../../services/destinationServices.js';
 
 import DestinationCard from '../DestinationCard/DestinationCard';
-import TypesList from './TypesList/TypesList';
-import '../Types/styles/Types.css';
+
+import './styles/Home.css';
 
 
 
-const Types = () =>{
+const Home = () =>{
     const [destinations, setDestinations] = useState([]);
 
     useEffect(() => {
-        destinationServices.getAllDestinations()
-            .then(destinations => setDestinations(destinations));
+        destinationServices.getAll()
+            .then(res => setDestinations(res));
     }, []);
 
     
         return (
-            <div className="destinations">               
+            <div className="destinations">           
 
-                <TypesList />
+                
 
                 <ul className="destination-list">
                 {destinations.map((x) => (
-                        
+                       
                             <DestinationCard
                                 title={x.title}
                                 city={x.city}
                                 country={x.country}
-                                imageURL={x.imageURL}
-                                story = {x.story}
+                                imageURL={x.logoUrl}
+                                story ={x.story}
+                                creator = {x.creator}
                             />
-                       
+                        
                         )
                     )}
                   
@@ -97,4 +98,4 @@ const Types = () =>{
 //     }
 // }
 
-export default Types;
+export default Home;
