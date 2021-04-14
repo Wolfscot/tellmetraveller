@@ -16,7 +16,7 @@ const router = require('express').Router();
 
 router.get('/all', controllers.destination.get.all);
 
-router.get('/details/:id',  controllers.destination.get.details);
+router.get('/details/:_id',  controllers.destination.get.details);
 
 // router.get('/my', (auth), destinationController.get.my);
 

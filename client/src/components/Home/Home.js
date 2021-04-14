@@ -1,6 +1,6 @@
 
 import React, { useState, useEffect} from 'react';
-import { Link } from "react-router-dom";
+
 import * as destinationServices from '../../services/destinationServices.js';
 
 import DestinationCard from '../DestinationCard/DestinationCard';
@@ -24,15 +24,16 @@ const Home = () =>{
                 
 
                 <ul className="destination-list">
-                {destinations.map((x) => (
+                {destinations.map((destination) => (
                        
-                            <DestinationCard
-                                title={x.title}
-                                city={x.city}
-                                country={x.country}
-                                imageURL={x.logoUrl}
-                                story ={x.story}
-                                creator = {x.creator}
+                            <DestinationCard key ={destination._id}
+                                title={destination.title}
+                                city={destination.city}
+                                country={destination.country}
+                                imageURL={destination.imageURL}
+                                type = {destination.type}
+                                story ={destination.story}
+                                creator = {destination.creator}
                             />
                         
                         )
