@@ -1,4 +1,4 @@
-const url = 'http://localhost:5000/destinations';
+const url = 'http://localhost:5000/api/destinations';
 
 export const getAllDestinations = (type = '') => {
     let destinationsUrl = url + ((type && type !== 'all') ? `?type=${type}` : '');
@@ -8,8 +8,9 @@ export const getAllDestinations = (type = '') => {
         .catch(error => console.log(error));
 };
 
-export const getOneDestination = (destinationId) => {
-    return fetch(`${url}/${destinationId}`)
+export const getOneDestination = (destinationId) => {    
+
+    return fetch(`${url}/details/${destinationId}`)
         .then(res => res.json())
         .catch(error => console.log(error));
 };
@@ -42,7 +43,15 @@ export const updateDestination = (destinationId, destination) => {
         body: JSON.stringify(destination)
     });
 };
-
+export const deleteDestination = (destinationId) => {
+    return fetch(`${url}/${destinationId}`, {
+        method: 'DELETE',
+        headers: {
+            'Content-Type': 'application/json',
+            
+        },
+    })
+}
 export const destination = (destinationId, votes) => {
     return fetch(`${url}/${destinationId}`, {
         method: 'PATCH',

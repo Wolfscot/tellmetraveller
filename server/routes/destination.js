@@ -1,6 +1,6 @@
-// const controllers = require('../controllers/');
+const controllers = require('../controllers/');
 // const router = require('express').Router();
-const { auth } = require('../utils');
+const { auth } = require('../utils/auth')
 
 // router.get('/', controllers.destination.get);
 
@@ -14,16 +14,16 @@ const { auth } = require('../utils');
 const destinationController = require('../controllers/destination');
 const router = require('express').Router();
 
-router.get('/all', destinationController.get.all);
+router.get('/all', controllers.destination.get.all);
 
-router.get('/details/:id', (auth), destinationController.get.details);
+router.get('/details/:id',  controllers.destination.get.details);
 
-router.get('/my', (auth), destinationController.get.my);
+// router.get('/my', (auth), destinationController.get.my);
 
-router.post('/', (auth), destinationController.post.create);
+router.post('/', controllers.destination.post.create);
 
-router.put('/:id', (auth),destinationController.put);
+router.put('/:id', controllers.destination.put);
 
-router.delete('/:id', (auth), destinationController.delete);
+router.delete('/:id',  controllers.destination.delete);
 
 module.exports = router;

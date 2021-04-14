@@ -9,8 +9,8 @@ const Destination = ({
     imageURL,
     city,
     country,
-    creator,
-    votes
+    creator
+    
 }) => {
 
     return (

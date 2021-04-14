@@ -14,14 +14,14 @@ const DestinationDetails = ({
             .then(res => setDest(res));
     }, []);
 
-    const oButtonVoteClickHandler = () => {
-        let votes = destination.votes + 1;
+    // const oButtonVoteClickHandler = () => {
+    //     let votes = destination.votes + 1;
 
-        destinationService.destination(match.params.destinationId, votes)
-            .then((populatedDestination) => {
-                setDest(state => ({...state, votes: Number(populatedDestination.votes)}))
-            });
-    };
+    //     destinationService.destination(match.params.destinationId, votes)
+    //         .then((populatedDestination) => {
+    //             setDest(state => ({...state, votes: Number(populatedDestination.votes)}))
+    //         });
+    // };
 
     return (
         <section className="destination-details">
@@ -35,8 +35,8 @@ const DestinationDetails = ({
             </div>
             
             <div className="destination-options">
-                <Link to={`/destinations/details/${destination.id}`}><button className="button">Vote</button></Link>
-                <Link to={`/destinations/details/${destination.id}/edit`}><button className="button">Edit</button></Link>
+                <Link to={`/destinations/details/${destination._id}`}><button className="button">Vote</button></Link>
+                <Link to={`/destinations/details/${destination._id}/edit`}><button className="button">Edit</button></Link>
                 <Link to="#"><button className="button">Delete</button></Link>
             </div>
             <p className="details-story">{destination.story}</p>

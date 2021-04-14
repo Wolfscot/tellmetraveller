@@ -15,14 +15,14 @@ module.exports = {
                 .then(journal => {
                     res.json(journal);
                 })
-        },
-        my: (req, res, next) => {
-            const { id } = req.body;
-            models.Destination.find({creatorId: id})
-                .then(destinations => {
-                    res.json(destinations);
-                });
-        },
+        }
+        // my: (req, res, next) => {
+        //     const { id } = req.body;
+        //     models.Destination.find({creatorId: id})
+        //         .then(destinations => {
+        //             res.json(destinations);
+        //         });
+        // },
     },
 
     post: {        
@@ -54,8 +54,8 @@ module.exports = {
                         models.Destination.findOne({_id: createdJournal._id})
                     ]);
                 })
-                .then(([modifiedObj, DestinationObj]) => {
-                    res.send(DestinationObj);
+                .then(([modifiedObj, destinationObj]) => {
+                    res.send(destinationObj);
                 })
                 .catch(next);
         },
@@ -70,6 +70,8 @@ module.exports = {
             imageURL,
             type,
             story,
+            votes,
+            creatorId
            
             
         } = req.body;
@@ -80,7 +82,9 @@ module.exports = {
             country,
             imageURL,
             type,
-            story
+            story,
+            votes,
+            creatorId
            })
             .then((updatedDestination) => res.send(updatedDestination))
             .catch(next);
@@ -89,7 +93,7 @@ module.exports = {
     delete: (req, res, next) => {
         const id = req.params.id;
         models.Destination.deleteOne({_id: id})
-            .then((removedDestination) => res.send(rremovedDestination))
+            .then((removedDestination) => res.send(removedDestination))
             .catch(next)
     }
 };
