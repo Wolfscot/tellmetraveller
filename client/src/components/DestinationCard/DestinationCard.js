@@ -16,7 +16,7 @@ const Destination = ({
     return (
         <li className="destination-card">
            
-            <p className="destination-img"><img src={imageURL} /></p>
+            <p className="destination-img"><img src={imageURL} alt="property of Web" /></p>
             <h2>{title}</h2>
             <p> {type}</p>
             <p className="destination-city">City: {city}</p>

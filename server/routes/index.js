@@ -1,7 +1,7 @@
 const user = require('./user');
-const destination = require('./destination');
+const story = require('./story');
 
 module.exports = {
     user,
-    destination
+    story
 };

@@ -1,7 +1,7 @@
 const url = 'http://localhost:5000/api/destinations';
 
 export const getAll = () => {
-    return fetch(`${url}/all`)
+    return fetch(`${url}`)
         .then(res => res.json())
         .catch(error => console.log(error));
 }
@@ -19,7 +19,8 @@ export const create = (
     imageURL,
     type,
     story,
-    creator) => {
+    creator
+    ) => {
     let destination = {
         title:title,
         city:city,

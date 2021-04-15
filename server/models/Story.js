@@ -3,7 +3,7 @@ const Schema = mongoose.Schema;
 const Model = mongoose.model;
 const { String, Number, Boolean, ObjectId } = Schema.Types;
 
-const destinationSchema = new Schema({
+const storySchema = new Schema({
 
     title: {
         type: String,
@@ -21,11 +21,11 @@ const destinationSchema = new Schema({
         type: String,
         required: true,
     },
-    story: {
+    synopsis: {
         type: String,
         required: true,
     },
-    type: {
+    category: {
         type: String,
         required: true,
     },
@@ -33,9 +33,9 @@ const destinationSchema = new Schema({
     creator: {
         type: ObjectId,
         ref: "User"
-    },
-    votes: [{ type: ObjectId, ref: 'User' }]
+    }
+    
 
 });
 
-module.exports = new Model('Destination', destinationSchema);
+module.exports = new Model('Story', storySchema);

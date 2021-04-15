@@ -1,9 +1,9 @@
 const User = require('./User');
-const Destination = require('./Destination');
+const Story = require('./Story');
 const TokenBlacklist = require('./TokenBlacklist');
 
 module.exports = {
     User,
-    Destination,
+    Story,
     TokenBlacklist
 };

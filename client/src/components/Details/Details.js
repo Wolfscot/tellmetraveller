@@ -1,3 +1,5 @@
+
+
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import * as destinationService from '../../services/destinationServices';
@@ -8,7 +10,7 @@ import * as destinationService from '../../services/destinationServices';
     
 
     let [destination, setDestination] = useState({});
-// eslint-disable-line react-hooks/exhaustive-deps
+
     useEffect(() => {
 
         destinationService.getOne(match.params.destinationId)
@@ -22,7 +24,7 @@ import * as destinationService from '../../services/destinationServices';
             <p className="details-country">Country: {destination.country}</p>
             <p className="details-creator">Traveller: {destination.creator}</p>
             <div className ="destination-media">
-                <p className="details-img"><img src={destination.imageURL} /></p>               
+                <p className="details-img"><img src={destination.imageURL} alt="property of Web" /></p>               
                 
             </div>
             

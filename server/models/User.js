@@ -41,8 +41,8 @@ const userSchema = new Schema({
         require: true
     },
 
-    destinations: [{ type: ObjectId, ref: "Destination" }],
-    votes: [{ type: ObjectId, ref: 'Destination' }]
+    stories: [{ type: ObjectId, ref: "Story" }],
+    
 
 });
 
