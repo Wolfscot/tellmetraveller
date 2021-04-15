@@ -4,25 +4,19 @@ module.exports = {
     get: {
         all: (req, res, next) => {
             models.Destination.find().populate('creatorId')
-                .then(journals => {
-                    res.json(journals);
+                .then(destinations => {
+                    res.json(destinations);
                 });
         },
 
         details: (req, res, next) => {
             const {id} = req.params;
             models.Destination.findById(id)
-                .then(journal => {
-                    res.json(journal);
+                .then(destination => {
+                    res.json(destination);
                 })
-        }
-        // my: (req, res, next) => {
-        //     const { id } = req.body;
-        //     models.Destination.find({creatorId: id})
-        //         .then(destinations => {
-        //             res.json(destinations);
-        //         });
-        // },
+        },
+        
     },
 
     post: {        
@@ -70,7 +64,7 @@ module.exports = {
             imageURL,
             type,
             story,
-            votes,
+            
             creatorId
            
             
@@ -83,7 +77,7 @@ module.exports = {
             imageURL,
             type,
             story,
-            votes,
+            
             creatorId
            })
             .then((updatedDestination) => res.send(updatedDestination))

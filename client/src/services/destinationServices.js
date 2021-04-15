@@ -1,18 +1,19 @@
-const basicUrl = 'http://localhost:5000/api/destinations';
+const url = 'http://localhost:5000/api/destinations';
 
 export const getAll = () => {
-    return fetch(`${basicUrl}/all`)
+    return fetch(`${url}/all`)
         .then(res => res.json())
         .catch(error => console.log(error));
 }
 
 export const getOne = (destinationId) => {
-    return fetch(`${basicUrl}/details/${destinationId}`)
+    return fetch(`${url}/details/${destinationId}`)
         .then(res => res.json())
         .catch(error => console.log(error));
 }
 
-export const create = (title,
+export const create = (
+    title,
     city,
     country,
     imageURL,
@@ -20,16 +21,16 @@ export const create = (title,
     story,
     creator) => {
     let destination = {
-        title,
-        city,
-        country,
-        imageURL,
-        type,
-        story,
-        creator
+        title:title,
+        city:city,
+        country:country,
+        imageURL:imageURL,
+        type:type,
+        story:story,
+        creator:creator
     };
 
-    return fetch(`${basicUrl}/`, {
+    return fetch(`${url}/`, {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
@@ -40,7 +41,7 @@ export const create = (title,
 };
 
 export const update = (destinationId, destination) => {
-    return fetch(`${basicUrl}/${destinationId}`, {
+    return fetch(`${url}/${destinationId}`, {
         method: 'PUT',
         headers: {
             'Content-Type': 'application/json',
@@ -51,7 +52,7 @@ export const update = (destinationId, destination) => {
 }
 
 export const deleteDestination = (destinationId) => {
-    return fetch(`${basicUrl}/${destinationId}`, {
+    return fetch(`${url}/${destinationId}`, {
         method: 'DELETE',
         headers: {
             'Content-Type': 'application/json',

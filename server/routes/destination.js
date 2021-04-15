@@ -1,22 +1,12 @@
 const controllers = require('../controllers/');
-// const router = require('express').Router();
+
 const { auth } = require('../utils/auth')
-
-// router.get('/', controllers.destination.get);
-
-// router.post('/', auth(), controllers.destination.post);
-
-// router.put('/:id', auth(), controllers.destination.put);
-
-// router.delete('/:id', auth(), controllers.destination.delete);
-
-
-const destinationController = require('../controllers/destination');
 const router = require('express').Router();
+
 
 router.get('/all', controllers.destination.get.all);
 
-router.get('/details/:_id',  controllers.destination.get.details);
+router.get('/details/:id',  controllers.destination.get.details);
 
 // router.get('/my', (auth), destinationController.get.my);
 

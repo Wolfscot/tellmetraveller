@@ -1,4 +1,7 @@
 import './styles/Header.css';
+import {Link} from "react-router-dom";
+import React from 'react';
+
 
 
 
@@ -8,24 +11,24 @@ const Header =() =>{
         <nav className="navbar">
             <section className="user-mode">
                 <div className="user-options">
-                    <a href="/">All Stories</a>
-                    <a href="#">My Diary</a>
-                    <a  href="/destinations/create">Add a Story</a>
-                    <a  href="/about">About</a>
+                    <Link to="/destinations/all">All Stories</Link>
+                    <Link to="/">My Diary</Link>
+                    <Link to="/destinations/create">Add a Story</Link>
+                    <Link to="/about">About</Link>
                     
                 </div>
                 <div className="user-settings">
                     <ul>
                         <li className="welcome-message">Welcome, Pesho!</li>
-                        <li><a href="#"> Logout</a></li>
+                        <li><Link to="/"> Logout</Link></li>
                     </ul>
                 </div>
             </section>
             <section className="guest-mode">
                 <ul>
-                    <li><a href="/">Home</a></li>
-                    <li><a href="/register"> Register</a></li>
-                    <li><a href="/login">Login</a></li>
+                    <li><Link to="/">Home</Link></li>
+                    <li><Link to="/register">Register</Link></li>
+                    <li><Link to="/login">Login</Link></li>
                     
                 </ul>
             </section>

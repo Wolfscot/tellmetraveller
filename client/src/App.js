@@ -17,18 +17,17 @@ import About from './components/About/About';
 function App() {
   return (
     <div className="container">
-      <Header/>
-      
+      <Header/> 
      
 
         <Switch>
           <Route path="/"component={Home} />          
-          <Route path="/destinations/details/:destinationId" exact component={DestinationDetails} />
+          <Route path="/destinations/details/:destinationId" component={DestinationDetails} />
           <Route path="/destinations/details/:destinationId/edit" component={EditDestinationForm } />
           <Route path="/destinations/create" component={CreateDestinationForm} />
-          <Route path="/register" component={Register} />
-          <Route path="/login" component={Login} />
-          <Route path="/about" component={About} />
+          <Route exact path="/register" component={Register} />
+          <Route exact path="/login" component={Login} />
+          <Route exact path="/about" component={About} />
           
         </Switch>
         
