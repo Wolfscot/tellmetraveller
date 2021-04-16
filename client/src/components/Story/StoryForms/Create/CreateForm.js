@@ -1,6 +1,6 @@
-import * as destinationService from '../../../services/destinationServices';
-import InputError from '../../../Shared/InputError/InputError'
-import '../styles/DestinationForm.css'
+import * as storyServices from '../../../../services/storyServices';
+import InputError from '../../../../Shared/InputError'
+import '../styles/StoryForm.css'
 import {useHistory} from "react-router-dom"
 import React, {useState} from "react";
 
@@ -12,13 +12,13 @@ const CreateForm = () => {
         e.preventDefault();
 
         const {
-            title,city,country, imageURL, type, story,creator
+            title, city, country, imageURL, synopsis, category, creator
         } = e.target;
 
-        destinationService.create(
-            title.value,city.value,country.value, imageURL.value, type.value, story.value,creator.value)
+        storyServices.create(
+            title.value, city.value, country.value, imageURL.value, synopsis.value, category.value, creator)
             .then(() => {
-                history.push('/destinations/all')
+                history.push('/story/all')
             })
     };
 
@@ -30,7 +30,7 @@ const CreateForm = () => {
         }
     };
     return (
-        <section className="create-destination">
+        <section className="create-story">
             <h1>Create Story</h1>
             <form onSubmit={onCreateSubmitHandler}>
                     <label htmlFor="title">Title</label>                        
@@ -40,9 +40,9 @@ const CreateForm = () => {
                     <label htmlFor="country">Country</label>                        
                     <input type="text" name="country" id="country" placeholder="Country" required />
  
-                    <label htmlFor="story">Story</label>
+                    <label htmlFor="synopsis">Synopsis</label>
                         
-                    <textarea rows="7" cols="30" type="text" name="story" id="story"
+                    <textarea rows="7" cols="30" type="text" name="synopsis" id="synopsis"
                                 placeholder="Your story here..." required
                                 onBlur={onDescriptionHandler}></textarea>
                     <InputError>{errorMessage}</InputError>
@@ -53,7 +53,7 @@ const CreateForm = () => {
                             
                        
                                 
-                        <label htmlFor="type">Type</label>
+                        <label htmlFor="category">Category</label>
                         <span className="input">
                             <select type="text" name="category">
                                 <option value="mountain-walk">Mountain Walk</option>

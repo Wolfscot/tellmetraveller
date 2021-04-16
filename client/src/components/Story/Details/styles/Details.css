@@ -5,7 +5,7 @@
 
 
 
-  .destination-details {
+  .story-details {
     box-sizing: border-box;
     align-self: center;
     width: 60%;
@@ -22,7 +22,7 @@
   }
 
 
-  .destination-details:hover {
+  .story-details:hover {
     box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2),
       0 6px 20px 0 rgba(0, 0, 0, 0.19);
   }    
@@ -44,7 +44,7 @@
       }
 
 
-    .details-story {
+    .story-synopsis {
         margin: 1rem;
       
       text-align:center;     
@@ -54,7 +54,7 @@
      
       }
     
-      .destination-details h1 {
+      .story-details h1 {
         color: #1b5e20;
         font-weight: 300;
         padding-top: 15px;
@@ -69,7 +69,7 @@
      
 
      
-      .destination-details p {
+      .story-details p {
         
         line-height: 20px;
         color: #1b5e20;
@@ -80,7 +80,7 @@
       }     
 
       
-     .destination-options .button {
+     .story-options .button {
         outline: 0;
         border: 0;
         background: none;
@@ -99,7 +99,7 @@
 
 
       }
-      .destination-options .button:hover {
+      .story-options .button:hover {
         background: #1b5e20;
         border: 2px solid gold;
         color: gold;

@@ -2,16 +2,20 @@ import { Route, Switch } from 'react-router-dom';
 
 import './App.css';
 
-import Header from './components/Header/Header';
+import Header from './components/Common/Header/Header';
 
-import Footer from './components/Footer/Footer';
-import Home from './components/Home/Home';
-import DestinationDetails from './components/Details/Details';
-import EditDestinationForm from './components/DestinationForms/Edit/EditForm';
-import CreateDestinationForm from './components/DestinationForms/Create/CreateForm';
+import Footer from './components/Common/Footer/Footer';
+import Home from './components/Common/Home/Home';
+import About from './components/Common/About/About';
+
+// import StoryCard from './components/Story/StoryCard/StoryCard'
+import StoryDetails from './components/Story/Details/Details';
+import EditForm from './components/Story/StoryForms/Edit/EditForm';
+import CreateForm from './components/Story/StoryForms/Create/CreateForm';
 import Register from './components/Users/Register/Register';
 import Login from './components/Users/Login/Login';
-import About from './components/About/About';
+
+
 
 
 function App() {
@@ -22,9 +26,9 @@ function App() {
 
         <Switch>
           <Route path="/"component={Home} />          
-          <Route path="/destinations/details/:destinationId" component={DestinationDetails} />
-          <Route path="/destinations/details/:destinationId/edit" component={EditDestinationForm } />
-          <Route path="/destinations/create" component={CreateDestinationForm} />
+          <Route path="/story/details/:storyId" component={StoryDetails} />
+          <Route path="/story/details/:storyId/edit" component={EditForm } />
+          <Route path="/story/create" component={CreateForm} />
           <Route exact path="/register" component={Register} />
           <Route exact path="/login" component={Login} />
           <Route exact path="/about" component={About} />

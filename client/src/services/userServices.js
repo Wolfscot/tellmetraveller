@@ -9,7 +9,8 @@ const userService = {
         headers: {
           'Content-type': 'application/json'
         }
-      }).then(res => res.json());
+      }).then(res => res.json())
+      .catch(e => {console.log(e)});
     },
   
     login: function (data) {
@@ -20,7 +21,8 @@ const userService = {
           'Content-type': 'application/json'
         },
         credentials: 'include'
-      }).then(res => res.status === 200 ? res.json() : res.text());
+      }).then(res => res.json())
+      .catch(e => {console.log(e)});
     },
   
     logout: function () {

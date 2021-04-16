@@ -1,26 +1,26 @@
-.destinations {
+.stories {
   background-color: rgb(80, 130, 5);
 }
-.destinations > nav > ul {
+.stories > nav > ul {
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
      
   }
-  .destinations >nav h1{
+  .stories >nav h1{
     color:gold;
       text-align: center;
       
   }
   
-  .destinations> nav.navbar-destinations >ul li {
+  .stories> nav.navbar-stories >ul li {
     padding: 0.5rem;
    
     list-style-type: none;
     
   }
 
-  .destinations> nav.navbar-destinations >ul > li >a{
+  .stories> nav.navbar-stories >ul > li >a{
     display: block;
     padding: 0.5rem 1rem;    
     text-decoration: none;
@@ -31,7 +31,7 @@
     letter-spacing: 2px;
   }
 
-  .destinations> nav.navbar-destinations >ul > li > a:hover {
+  .stories> nav.navbar-stories >ul > li > a:hover {
     background: #1b5e20;
     color:gold;
     border: solid;
@@ -41,11 +41,11 @@
 
   }
   
-  .destinations> nav.navbar-destinations {
+  .stories> nav.navbar-stories {
     justify-content: center;
   }
 
-  .destination-list {
+  .story-list {
     display: flex;
     flex-wrap: wrap;
     justify-content:space-evenly;

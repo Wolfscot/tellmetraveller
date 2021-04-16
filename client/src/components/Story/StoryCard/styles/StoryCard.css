@@ -1,4 +1,4 @@
-li.destination-card {
+li.story-card {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -18,7 +18,7 @@ li.destination-card {
 
 
 
-.destination-img {
+.story-img {
     width: 15rem;
     position: relative;
     overflow: hidden;
@@ -27,7 +27,7 @@ li.destination-card {
 }
 
   
-.destination-img img {
+.story-img img {
     display: block;
     position: absolute;
     left: 0;
@@ -41,24 +41,24 @@ li.destination-card {
     border-radius: 10px 250px;
   }
   
-.destination-img::after {
+.story-img::after {
     display: block;
     content: "";
     padding-top: 65%;
 }
 
-.destination-info {
+.story-info {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
 }
-.destination-info h2, p {
+.story-info h2, p {
     margin: 0.05rem;
     letter-spacing: 1px;
     color: gold;
     font-weight: bold;
 }
-.destination-info .button{
+.story-info .button{
     text-decoration: none;
     font-weight: bold;
     background: gold;
