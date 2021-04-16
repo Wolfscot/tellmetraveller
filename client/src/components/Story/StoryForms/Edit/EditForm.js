@@ -19,7 +19,7 @@ const EditForm =({
         console.log(e.target);
         let storyId = match.params.storyId;
         const {title, imageURL, category, synopsis} =e.target;
-        let newStoryInfo = {...stroy,
+        let newStoryInfo = {...story,
             title:title.value,
             imageURL:imageURL.value,
             category: category.value,

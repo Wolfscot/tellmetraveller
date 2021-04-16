@@ -13,7 +13,7 @@ const userSchema = new Schema({
         unique: true,
         required: true
     },
-    firstname: {
+    firstName: {
         type: String,
         unique: true,
         required: true
@@ -23,11 +23,7 @@ const userSchema = new Schema({
         unique: true,
         required: true
     },
-    age: {
-        type: Number,
-        unique: true,
-        required: true
-    },
+    
     email: {
         type: String,
         trim: true,

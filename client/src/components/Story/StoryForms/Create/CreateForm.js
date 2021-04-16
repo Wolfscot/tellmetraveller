@@ -1,5 +1,5 @@
 import * as storyServices from '../../../../services/storyServices';
-import InputError from '../../../../Shared/InputError'
+import InputError from '../../../../Shared/InputError/InputError';
 import '../styles/StoryForm.css'
 import {useHistory} from "react-router-dom"
 import React, {useState} from "react";

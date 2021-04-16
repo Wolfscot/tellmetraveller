@@ -1,7 +1,12 @@
 const baseUrl = `http://localhost:5000/api/user/`
 
 const userService = {   
-
+  get: function () {
+    return fetch(`${baseUrl}`)
+    
+    .then(res => res.json());
+  },
+  
     register: function (data) {
       return fetch(`${baseUrl}/register`, {
         body: JSON.stringify(data),

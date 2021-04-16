@@ -1,7 +1,7 @@
 header{
   border:solid 2px gold;
   
-  background-image: url(../../../images/banner-jungle.jpg);
+  background-image: url(../../../../images/banner-jungle.jpg);
   
   width:auto;
   height: auto; /* You must set a specified height */
