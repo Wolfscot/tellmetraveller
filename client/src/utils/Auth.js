@@ -24,7 +24,7 @@ class Auth extends Component {
     }
 
     signOut = () => {
-        document.cookie = "x-auth-token= ; expires = Thu, 12 Nov 1988 00:00:00 GMT"
+        document.cookie = "x-auth-token= ; expires = Thu, 01 Jan 1970 00:00:00 GMT"
         this.setState({
             signedIn: false,
             user: null

@@ -16,7 +16,7 @@ const Register = () => {
         lastName: "",
         email: "",
         password: "",
-        confirm_password: ""
+        // confirm_password: ""
     },
     validationSchema: Yup.object({
         username: Yup.string()
@@ -37,9 +37,9 @@ const Register = () => {
       password: Yup.string()
         .min(6, "Minimum 6 characters")
         .required("Required!"),
-      confirm_password: Yup.string()
-        .oneOf([Yup.ref("password")], "Password's not match")
-        .required("Required!")
+      // confirm_password: Yup.string()
+      //   .oneOf([Yup.ref("password")], "Password's not match")
+      //   .required("Required!")
     }),
 
     onSubmit: values => {
@@ -116,7 +116,7 @@ const Register = () => {
             <p>{formik.errors.password}</p>
           )}
         </div>
-        <div>
+        {/* <div>
           <label htmlFor="confirm_password">Confirm Password</label>
           <input
             type="password"
@@ -128,7 +128,7 @@ const Register = () => {
             formik.touched.confirm_password && (
               <p>{formik.errors.confirm_password}</p>
             )}
-        </div>
+        </div> */}
         <div>
         <input className="button submit" type="submit" value="Register" />
         </div>

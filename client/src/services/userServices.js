@@ -10,9 +10,8 @@ const userServices = {
     
         body: JSON.stringify(data),
         method: 'POST',
-        headers: {
-          'Content-type': 'application/json'
-        }
+        headers: {'Content-type': 'application/json'},
+        credentials: 'include'
       }).then(res => res.json())
       .catch(e => {console.log(e)});
     },
