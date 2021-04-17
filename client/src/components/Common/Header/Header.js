@@ -1,34 +1,37 @@
 import './styles/Header.css';
 import {Link} from "react-router-dom";
 import React from 'react';
+import UserContext from '../../../utils/UserContext';
 
 
 
+const Header =(props) =>{
 
-const Header =() =>{
+    const status = React.useContext(UserContext);
+    const {signOut} =props;
     return (
         <header className="header">
         <nav className="navbar">
             <section className="user-mode">
                 <div className="user-options">
-                    <Link to="/story/all">All Stories</Link>
-                    <Link to="/">My Diary</Link>
-                    <Link to="/story/create">Add a Story</Link>
-                    <Link to="/about">About</Link>
-                    
+                <ul>
+                <li>{status.signedIn &&<Link to="/all">All Stories</Link>}</li>
+                <li>{status.signedIn &&<Link to="/my">My Diary</Link>}</li>
+                <li>{status.signedIn &&<Link to="/create">Add a Story</Link>}</li>                 
+                </ul> 
                 </div>
                 <div className="user-settings">
                     <ul>
-                        <li><Link to="/user-profile"> Profile</Link></li>
-                        <li><Link to="/"> Logout</Link></li>
+                    
+                    <li>{status.signedIn && <button  onClick={signOut}>Logout</button>}</li>
                     </ul>
                 </div>
             </section>
             <section className="guest-mode">
                 <ul>
-                    <li><Link to="/">Home</Link></li>
-                    <li><Link to="/register">Register</Link></li>
-                    <li><Link to="/login">Login</Link></li>
+                    
+                <li>{!status.signedIn && <Link to="/register">Register</Link>}</li>
+                <li>{!status.signedIn && <Link to="/login">Login</Link>}</li>
                     
                 </ul>
             </section>

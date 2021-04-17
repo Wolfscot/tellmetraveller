@@ -51,7 +51,7 @@ nav.navbar {
     list-style: none outside;
     position: relative;
   }
-  nav.navbar ul li a {
+  nav.navbar ul li a, button {
     display: block;
     padding: 0.4rem 0.8rem;
     
@@ -65,7 +65,8 @@ nav.navbar {
   
   nav.navbar ul li a:hover,
   nav.navbar ul li:hover > a,
-  nav > section > div.user-options > a:hover {
+  nav > section > div.user-options > a:hover,
+  button  :hover {
     background: #1b5e20;
     color:gold;
     border: solid;

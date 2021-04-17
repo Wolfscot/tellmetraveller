@@ -40,7 +40,7 @@ export const update = (storyId, story) => {
     })
 }
 
-export const deleteS = (storyId) => {
+export const deleteStory = (storyId) => {
     return fetch(`${url}/${storyId}`, {
         method: 'DELETE',
         headers: {

@@ -21,7 +21,7 @@ const Story = ({
             <p> {category}</p>
             <p className="story-city">City: {city}</p>
             <p className="story-country">Country:{country}</p>
-            <p className="story-creator">Traveller:{creator}</p>
+            <p className="story-creator">Traveller:{creator.username}</p>
             <div className="story-info">
                 
                 <Link to={`/story/details/${id}`}><button className="button">Experience</button></Link>

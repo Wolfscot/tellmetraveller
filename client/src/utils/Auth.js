@@ -2,7 +2,7 @@ import React, {Component} from 'react'
 import UserContext from './Context'
 
 function getCookie(name) {
-    const cookieValue = document.cookie.match('(^|;)\\s*' + name + '\\s*=\\s*([^;]+)')?.pop() || '';
+    const cookieValue = document.cookie.match('(^|;) ?' + name + '=([^;]*)(;|$)');
     return cookieValue ? cookieValue[2] : null;
 }
 
@@ -11,22 +11,22 @@ class Auth extends Component {
         super(props)
 
         this.state = {
-            loggedIn: null,
+            signedIn: null,
             user: null
         }
     }
 
-    logIn = (user) => {
+    signIn = (user) => {
         this.setState({
-            loggedIn: true,
+            signedIn: true,
             user
         })
     }
 
-    logOut = () => {
+    signOut = () => {
         document.cookie = "x-auth-token= ; expires = Thu, 12 Nov 1988 00:00:00 GMT"
         this.setState({
-            loggedIn: false,
+            signedIn: false,
             user: null
         })
     }
@@ -35,7 +35,7 @@ class Auth extends Component {
         const token = getCookie('x-auth-token')
     
         if(!token) {
-            this.logOut()
+            this.signOut()
             return
         }
     
@@ -52,33 +52,33 @@ class Auth extends Component {
             return promise.json()
         }).then(response => {
             if(response.status) {
-                this.logIn({
+                this.signIn({
                     username: response.user.username,
                     id: response.user._id,
                     
             })
             } else {
-                this.logOut()
+                this.signOut()
             }
         })
       }
     
     render() {
         const {
-            loggedIn,
+            signedIn,
             user
         } = this.state
 
-        if (loggedIn === null) {
+        if (signedIn === null) {
             return (<div>Loading...</div>)
         }
 
         return (
             <UserContext.Provider value={{
-                loggedIn,
+                signedIn,
                 user,
-                logIn: this.logIn,
-                logOut: this.logOut
+                signIn: this.signIn,
+                signOut: this.signOut
             }}>
                 {this.props.children}
             </UserContext.Provider>

@@ -1,14 +1,14 @@
 
 import '../styles/UserForm.css';
-import  userServices from '../../../services/userServices';
+
 import React from "react";
 
-import { useHistory } from 'react-router'
+
 import { useFormik } from "formik";
 import * as Yup from "yup";
 
 const Login = (props) => {
-    let history = useHistory();
+    
 
   const formik = useFormik({
     initialValues: {
@@ -27,12 +27,9 @@ const Login = (props) => {
       
     }),
 
-    onSubmit: values => {
-        userServices.register(values).then((res) => {
-            
-                history.push('/login')
-            });
-    },
+    
+        onSubmit: values => { props.login(values)}
+    
 });
      return (
     <section className="login-form">

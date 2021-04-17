@@ -11,7 +11,7 @@ module.exports = {
                 .catch(next);
                 return;
         }
-        if (story) { models.Story.find({ category: `${category}` })
+        if (category) { models.Story.find({ category: `${category}` })
             .then((stories) => res.send(stories))
             .catch(next);
             return;
